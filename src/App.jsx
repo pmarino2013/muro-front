@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import io from "socket.io-client";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const socket = io();
+const socket = io("https://muro-back.vercel.app");
 
 const App = () => {
   const [mensajes, setMensajes] = useState([]);
