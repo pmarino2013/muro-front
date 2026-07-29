@@ -7,9 +7,9 @@ export default defineConfig({
   server: {
     port: 5003,
     proxy: {
-      "/api": "http://localhost:5500",
+      "/api": "https://muro-back.vercel.app",
       "/socket.io": {
-        target: "http://localhost:5500",
+        target: "https://muro-back.vercel.app",
         ws: true,
       },
     },
