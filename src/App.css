@@ -1,9 +1,17 @@
 .wall-container {
   min-height: 100vh;
   background: var(--bg-wall);
-  background-image: 
-    radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
+  background-image:
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(99, 102, 241, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(236, 72, 153, 0.05) 0%,
+      transparent 50%
+    );
   padding: 2rem 1rem;
 }
 
@@ -57,11 +65,13 @@
   box-shadow: var(--card-shadow);
   position: relative;
   transform: rotate(-1deg);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .postit-form::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -8px;
   left: 50%;
@@ -147,20 +157,22 @@
   padding: 1rem;
   border: none;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent), #8b5cf6);
+  background: linear-gradient(135deg, #f43f5e, #e11d48);
   color: white;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.025em;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 4px 15px rgba(244, 63, 94, 0.4);
   margin-top: 0.5rem;
+  text-transform: uppercase;
 }
 
 .form-submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
-  background: linear-gradient(135deg, var(--accent-hover), #7c3aed);
+  box-shadow: 0 6px 25px rgba(244, 63, 94, 0.55);
+  background: linear-gradient(135deg, #e11d48, #be123c);
 }
 
 .form-submit:active {
@@ -182,18 +194,22 @@
 
 .postit-card {
   position: relative;
+  cursor: pointer;
   padding: 1.5rem;
   padding-top: 2rem;
   border-radius: 4px 4px 16px 16px;
   box-shadow: var(--card-shadow);
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   min-height: 160px;
   display: flex;
   flex-direction: column;
+  transform: rotate(var(--card-rotation, 0deg));
 }
 
 .postit-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 50%;
@@ -204,14 +220,27 @@
   border-radius: 0 0 4px 4px;
 }
 
-.postit-card:nth-child(6n+1) { background: var(--card-bg); transform: rotate(-2deg); }
-.postit-card:nth-child(6n+2) { background: var(--card-bg-pink); transform: rotate(1deg); }
-.postit-card:nth-child(6n+3) { background: var(--card-bg-blue); transform: rotate(-1.5deg); }
-.postit-card:nth-child(6n+4) { background: var(--card-bg-green); transform: rotate(2deg); }
-.postit-card:nth-child(6n+5) { background: var(--card-bg-purple); transform: rotate(-1deg); }
-.postit-card:nth-child(6n+6) { background: var(--card-bg-alt); transform: rotate(1.5deg); }
+.postit-card.postit-yellow {
+  background: var(--card-bg);
+}
+.postit-card.postit-pink {
+  background: var(--card-bg-pink);
+}
+.postit-card.postit-blue {
+  background: var(--card-bg-blue);
+}
+.postit-card.postit-green {
+  background: var(--card-bg-green);
+}
+.postit-card.postit-purple {
+  background: var(--card-bg-purple);
+}
+.postit-card.postit-orange {
+  background: var(--card-bg-alt);
+}
 
 .postit-card:hover {
+  --card-rotation: 0deg;
   transform: rotate(0deg) scale(1.03) translateY(-5px);
   box-shadow: var(--card-shadow-hover);
   z-index: 10;
@@ -238,12 +267,24 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.avatar-yellow { background: linear-gradient(135deg, #f59e0b, #d97706); }
-.avatar-pink { background: linear-gradient(135deg, #ec4899, #db2777); }
-.avatar-blue { background: linear-gradient(135deg, #3b82f6, #2563eb); }
-.avatar-green { background: linear-gradient(135deg, #10b981, #059669); }
-.avatar-purple { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
-.avatar-red { background: linear-gradient(135deg, #ef4444, #dc2626); }
+.avatar-yellow {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+.avatar-pink {
+  background: linear-gradient(135deg, #ec4899, #db2777);
+}
+.avatar-blue {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+.avatar-green {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+.avatar-purple {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+.avatar-red {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
 
 .avatar-name {
   font-weight: 600;

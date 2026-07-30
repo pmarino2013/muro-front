@@ -25,7 +25,7 @@ const App = () => {
   return (
     <div className="wall-container">
       <header className="wall-header">
-        <h1 className="wall-title">Muro de los Deseos</h1>
+        <h1 className="">Muro de los Deseos✨</h1>
         <p className="wall-subtitle">Comparte tus sueños con el mundo</p>
       </header>
       <div className="wall-content">

@@ -44,7 +44,7 @@ const FormApp = () => {
         />
       </div>
       <button type="submit" className="form-submit">
-        Publicar deseo ✨
+        Publica tu deseo✨
       </button>
     </form>
   );
