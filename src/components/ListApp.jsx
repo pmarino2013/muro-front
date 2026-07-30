@@ -72,7 +72,7 @@ const ListApp = ({ mensajes }) => {
             <div className={`avatar ${getAvatarColor(m.nombre)}`}>
               {getInitials(m.nombre)}
             </div>
-            <span className="avatar-name">{m.nombre || "Anónimo"}</span>
+            <span className="avatar-name">{m.nombre || "Anónimo"}✨</span>
           </div>
           <p className="postit-content">{m.contenido}</p>
           <footer className="postit-footer">
