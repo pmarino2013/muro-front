@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import io from "socket.io-client";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const socket = io();
+const socket = io(import.meta.env.VITE_API_URL);
 
 const App = () => {
   const [mensajes, setMensajes] = useState([]);

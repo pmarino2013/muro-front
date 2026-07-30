@@ -1,10 +1,6 @@
 {
   "rewrites": [
     {
-      "source": "/socket.io/:path*",
-      "destination": "https://muro-back.vercel.app/socket.io/:path*"
-    },
-    {
       "source": "/api/:path*",
       "destination": "https://muro-back.vercel.app/api/:path*"
     }
