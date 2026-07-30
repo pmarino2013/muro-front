@@ -24,7 +24,7 @@ const FormApp = () => {
   return (
     <form ref={formRef} onSubmit={handleSubmit}>
       <div className="form-group">
-        <label className="form-label">Tu nombre</label>
+        <label className="form-label">Tu nombre👤</label>
         <input
           type="text"
           className="form-input"
@@ -34,7 +34,7 @@ const FormApp = () => {
         />
       </div>
       <div className="form-group">
-        <label className="form-label">Tu deseo</label>
+        <label className="form-label">Tu deseo✏️</label>
         <textarea
           className="form-input form-textarea"
           placeholder="¿Qué deseas hoy?"
