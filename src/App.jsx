@@ -3,6 +3,7 @@ import io from "socket.io-client";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FormApp from "./components/FormApp";
 import ListApp from "./components/ListApp";
+import "./App.css";
 
 const socket = io(import.meta.env.VITE_API_URL);
 
@@ -22,13 +23,19 @@ const App = () => {
   }, []);
 
   return (
-    <div className="container py-5">
-      <div className="row justify-content-center">
-        <div className="col-lg-8">
-          <h1 className="text-center mb-4">Muro de los deseos</h1>
+    <div className="wall-container">
+      <header className="wall-header">
+        <h1 className="wall-title">Muro de los Deseos</h1>
+        <p className="wall-subtitle">Comparte tus sueños con el mundo</p>
+      </header>
+      <div className="wall-content">
+        <aside className="postit-form">
+          <h2 className="postit-form-title">Escribe tu deseo</h2>
           <FormApp />
+        </aside>
+        <main className="postit-wall">
           <ListApp mensajes={mensajes} />
-        </div>
+        </main>
       </div>
     </div>
   );

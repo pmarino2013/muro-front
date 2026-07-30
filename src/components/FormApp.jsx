@@ -22,32 +22,29 @@ const FormApp = () => {
   };
 
   return (
-    <form
-      ref={formRef}
-      onSubmit={handleSubmit}
-      className="card p-4 mb-4 shadow-sm"
-    >
-      <div className="mb-3">
+    <form ref={formRef} onSubmit={handleSubmit}>
+      <div className="form-group">
+        <label className="form-label">Tu nombre</label>
         <input
           type="text"
-          className="form-control"
-          placeholder="Tu nombre (opcional)"
+          className="form-input"
+          placeholder="Anónimo"
           value={nombre}
           onChange={(e) => setNombre(e.target.value)}
         />
       </div>
-      <div className="mb-3">
+      <div className="form-group">
+        <label className="form-label">Tu deseo</label>
         <textarea
-          className="form-control"
-          rows="3"
-          placeholder="Escribe tu deseo..."
+          className="form-input form-textarea"
+          placeholder="¿Qué deseas hoy?"
           value={contenido}
           onChange={(e) => setContenido(e.target.value)}
           required
         />
       </div>
-      <button type="submit" className="btn btn-primary w-100">
-        Publicar deseo
+      <button type="submit" className="form-submit">
+        Publicar deseo ✨
       </button>
     </form>
   );
